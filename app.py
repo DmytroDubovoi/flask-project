@@ -10,6 +10,7 @@ def index():
 
 @app.route('/register')
 def register():
+    # TODO: додати перевірку введених даних
     return render_template('register.html')
 
 
