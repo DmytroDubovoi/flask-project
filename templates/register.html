@@ -4,22 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Реєстрація</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
+    <div class="container">
 
-    <h2>Форма реєстрації</h2>
+        <form method="POST" action="/register">
+            <label>Логін:</label><br>
+            <input type="text" name="username" required><br>
 
-    <form>
-        <label>Логін:</label><br>
-        <input type="text" name="username"><br>
+            <label>Пароль:</label><br>
+            <input type="password" name="password" required><br>
 
-        <label>Пароль:</label><br>
-        <input type="password" name="password"><br><br>
+            <button type="submit">Зареєструватися</button>
+        </form>
 
-        <button type="submit">Зареєструватися</button>
-    </form>
-
+        <p><a href="/">На головну</a></p>
+    </div>
 </body>
 
 </html>

@@ -4,10 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Головна сторінка</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
-    <h1>Ласкаво просимо на наш Flask-сервер!</h1>
+    <div class="container">
+        <h1>Пет проект на Flask</h1>
+        <p>
+            <a href="/login">Увійти</a> |
+            <a href="/register">Реєстрація</a>
+        </p>
+    </div>
 </body>
 
 </html>
