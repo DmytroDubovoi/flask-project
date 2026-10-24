@@ -26,12 +26,14 @@ def get_db():
 
     return g.db
 
+
 @app.teardown_appcontext
 def close_db(error):
     db = g.pop('db', None)
 
     if db is not None:
         db.close()
+
 
 def init_db():
     with app.app_context():
@@ -54,7 +56,7 @@ def index():
 
 @app.route('/register')
 def register():
-    return render_template('register.html')
+    return render_template('broken_page.html')
 
 @app.route('/login')
 def login():
