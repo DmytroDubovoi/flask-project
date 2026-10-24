@@ -27,7 +27,7 @@ def get_db():
 
     return g.db
 
-
+    # Закриття з'єднання звільняє ресурси після завершення контексту.
 @app.teardown_appcontext
 def close_db(error):
     db = g.pop('db', None)
