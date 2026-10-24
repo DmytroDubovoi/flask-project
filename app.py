@@ -17,6 +17,7 @@ app.secret_key = 'super-secret-key-for-pet-project'
 
 app.config['DATABASE'] = 'app.db'
 
+    # З'єднання з SQLite повторно використовується в межах одного контексту.
 def get_db():
     if 'db' not in g:
         g.db = sqlite3.connect(
