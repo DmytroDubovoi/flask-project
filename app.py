@@ -13,6 +13,7 @@ from flask import (
 
 app = Flask(__name__)
 
+# Секретний ключ використовується для підпису сесійних cookie.
 app.secret_key = 'super-secret-key-for-pet-project'
 
 app.config['DATABASE'] = 'app.db'
